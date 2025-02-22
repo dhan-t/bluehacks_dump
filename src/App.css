@@ -1,0 +1,35 @@
+/* App.css */
+.App {
+  display: flex; /* Enables flexbox for layout */
+  height: 100vh; /* Make sure the app takes up full viewport height */
+  background-color: #f8f9fd;
+}
+
+.sidebar {
+  width: 200px; /* Adjust sidebar width as needed */
+  background-color: white; /* Light gray background for sidebar */
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.sidebar li.active {
+  background-color: #f8f9fd; /* Highlight active link */
+}
+
+.content {
+  flex: 1; /* Content takes up remaining space */
+  padding: 20px;
+  overflow-y: auto; /* Add scroll if content overflows */
+}
+
+/* Add more specific styles for your pages as needed */
