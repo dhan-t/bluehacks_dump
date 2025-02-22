@@ -1,4 +1,5 @@
 import React from "react";
+import "./upload.css";
 import {
   Box,
   Typography,
@@ -11,11 +12,11 @@ import {
 
 function Upload() {
   return (
-    <Container maxWidth="md" sx={{ mt: 4, mb: 4 }}>
+    <div className="main-div">
+      {" "}
       <Typography variant="h4" gutterBottom>
         Upload your video
       </Typography>
-
       <TextField
         fullWidth
         variant="outlined"
@@ -25,11 +26,9 @@ function Upload() {
         }}
         sx={{ mb: 4 }}
       />
-
       <Typography variant="h5" gutterBottom>
         Video analyze
       </Typography>
-
       <Grid container spacing={3} sx={{ mb: 4 }}>
         <Grid item xs={6}>
           <Paper sx={{ p: 2, textAlign: "center" }}>
@@ -52,14 +51,12 @@ function Upload() {
           </Paper>
         </Grid>
       </Grid>
-
       <Typography variant="h5" gutterBottom>
         Download extensive analytics
       </Typography>
       <Button variant="contained" color="success" sx={{ mb: 4 }}>
         Download CSV
       </Button>
-
       <Typography variant="h5" gutterBottom>
         Analyzation context
       </Typography>
@@ -83,7 +80,7 @@ function Upload() {
           landslide: 0.88%
         </Typography>
       </Paper>
-    </Container>
+    </div>
   );
 }
 

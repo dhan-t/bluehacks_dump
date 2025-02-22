@@ -1,6 +1,7 @@
 import Analyze from "./pages/analyze-page/analyze";
 import Dashboard from "./pages/dashboard-page/dashboard";
 import Upload from "./pages/upload-page/upload";
+import Resources from "./pages/resources-page/resources";
 import "./App.css";
 import { SetStateAction, useState } from "react";
 
@@ -19,6 +20,8 @@ function App() {
         return <Analyze />;
       case "upload":
         return <Upload />;
+      case "resources":
+        return <Resources />;
       default:
         return <Dashboard />; // Or handle default case differently
     }
@@ -45,6 +48,12 @@ function App() {
             onClick={() => handlePageChange("upload")}
           >
             Upload
+          </li>
+          <li
+            className={activePage === "resources" ? "active" : ""}
+            onClick={() => handlePageChange("resources")}
+          >
+            Resources
           </li>
         </ul>
       </div>

@@ -7,7 +7,14 @@ import {
   Grid,
   TextField,
   Container,
+  Table,
+  TableHead,
+  TableBody,
+  TableRow,
+  TableCell,
+  TableContainer,
 } from "@mui/material";
+
 import {
   LineChart,
   Line,
@@ -52,13 +59,31 @@ function Analyze() {
       </Typography>
 
       <div className="component-holder">
-        <div className="smaller-components">
-          <p>0.88%</p>
-          <p>deer</p>
-          <h6>Animal</h6>
+        <h2>Summary of dataset:</h2>
+        <div className="small-holder">
+          <div className="smaller-components">
+            <div className="summary-holder">
+              <p>0.88%</p>
+              <p>typhoon</p>
+            </div>
+            <h6>Disaster</h6>
+          </div>
+          <div className="smaller-components">
+            <div className="summary-holder">
+              <p>0.88%</p>
+              <p>typhoon</p>
+            </div>
+            <h6>Disaster</h6>
+          </div>
+          <div className="smaller-components">
+            <div className="summary-holder">
+              <p>0.88%</p>
+              <p>typhoon</p>
+            </div>
+            <h6>Disaster</h6>
+          </div>
         </div>
       </div>
-
       <Typography variant="h6" gutterBottom>
         Panic levels during the video time
       </Typography>
@@ -78,34 +103,34 @@ function Analyze() {
       <Typography variant="h6" gutterBottom>
         Extracted data
       </Typography>
-      <Paper sx={{ p: 2 }}>
-        <Box sx={{ overflowX: "auto" }}>
-          <table style={{ width: "100%", borderCollapse: "collapse" }}>
-            <thead>
-              <tr>
-                <th>animal</th>
-                <th>behavior</th>
-                <th>typhoon-reason</th>
-                <th>earthqk-reason</th>
-                <th>eruption-reason</th>
-                <th>flooding-reason</th>
-                <th>landslide-reason</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>deer</td>
-                <td>panicking</td>
-                <td>0.77%</td>
-                <td>0.77%</td>
-                <td>0.77%</td>
-                <td>0.77%</td>
-                <td>0.77%</td>
-              </tr>
-            </tbody>
-          </table>
-        </Box>
-      </Paper>
+      <div className="component-holder">
+        <TableContainer>
+          <Table>
+            <TableHead>
+              <TableRow>
+                <TableCell>animal</TableCell>
+                <TableCell>behavior</TableCell>
+                <TableCell>typhoon-reason</TableCell>
+                <TableCell>earthqk-reason</TableCell>
+                <TableCell>eruption-reason</TableCell>
+                <TableCell>flooding-reason</TableCell>
+                <TableCell>landslide-reason</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              <TableRow>
+                <TableCell>deer</TableCell>
+                <TableCell>panicking</TableCell>
+                <TableCell>0.77%</TableCell>
+                <TableCell>0.77%</TableCell>
+                <TableCell>0.77%</TableCell>
+                <TableCell>0.77%</TableCell>
+                <TableCell>0.77%</TableCell>
+              </TableRow>
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </div>
     </div>
   );
 }

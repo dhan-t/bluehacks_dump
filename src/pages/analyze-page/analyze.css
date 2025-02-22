@@ -30,25 +30,32 @@
   gap: 1rem;
 }
 
-.smaller-components {
-  gap: 0rem;
+.small-holder {
+  display: flex;
+  justify-content: space-between;
+}
 
+.smaller-components {
+  flex: 1;
+  height: fit-content;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 1rem;
   text-align: center;
-  width: 10rem;
-  height: 10rem;
-  flex-direction: column;
-  background-color: darkgray;
 }
 
 .smaller-components p {
-  font-size: 1.5rem;
+  font-size: 18px;
+  color: #333;
 }
 
-.small-holder {
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  width: 100%; /* Ensure it takes the full width of the parent */
+.summary-holder {
+}
+
+.smaller-components h6 {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  color: #888;
 }
 
 .dashboard h1 {
